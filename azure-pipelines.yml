@@ -6,13 +6,16 @@
 trigger:
 - master
 
+pool:
+name: Default
+
 jobs:  
 - deployment: VMDeploy
   displayName: web
   environment:
     name:  vm
     resourceType: VirtualMachine
-    tags: web
+
   strategy:
     # default deployment strategy, more coming...
     runOnce:
